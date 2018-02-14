@@ -1,0 +1,39 @@
+<ion-view title="Update book" hide-nav-bar="false" id="page6">
+  <ion-content padding="true" style="background: url(img/oKI9vMo6RWJaRZhFaYUx_literature-3033196.jpg) no-repeat center;background-size:cover;" class="has-header">
+    <ion-card>
+  <img height="500px" width="500px" class="img-thumbnail"  src="{{book.imageData}}">
+  <ion-card-content>
+    <div style="font-size:15px;">
+      <form id="addBooks-form2" class="list">
+        <label class="item item-input" id="addBooks-input3">
+          <span class="input-label">Book Name</span>
+          <input type="text"  ng-model="book.name">
+        </label>
+        <label class="item item-input" id="addBooks-input5">
+          <span class="input-label">Book id</span>
+          <input type="text"  ng-model="book.id">
+        </label>
+        <label class="item item-input" id="addBooks-input7">
+          <span class="input-label">Author</span>
+          <input type="text"  ng-model="book.authorName">
+        </label>
+        <label class="item item-input" id="addBooks-input6">
+          <span class="input-label">Department</span>
+          <input type="text"  ng-model="book.department">
+        </label>
+        <label class="item item-input" id="addBooks-input6">
+          <span class="input-label">Availability</span>
+          <input type="text"  ng-model="book.availability">
+        </label>
+      </form>
+
+          <button ng-click="updateBook(book)" type="button" id="updateBook-button14"  class="btn btn-primary btn-lg mb-3  icon ion-android-upload"> Update</button>
+        <button type="button" ui-sref="adminTabsController.adminLibrary()" id="bookDetails2-button34"  class="btn btn-primary btn-lg mb-3  icon ion-ios-close"> Cancel</button>
+
+      </div>
+          </ion-card-content>
+        </ion-card>
+
+
+  </ion-content>
+</ion-view>

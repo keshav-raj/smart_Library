@@ -1,0 +1,46 @@
+<ion-view view-title="Posts">
+    <ion-nav-buttons side="secondary">
+        <button class="button button-icon icon ion-plus-round" ng-click="openPost()">
+        </button>
+        <button class="button" ng-click="doLogoutAction()">
+        Logout
+      </button>
+    </ion-nav-buttons>
+    <ion-content class="padding">
+      <ion-item class="card">
+        <div class="item-text-wrap padding">
+          <h2>You Are Logged Into the Application:</h2>
+          <p>
+            <pre style="font-size:smaller"> {{currentUser | json}} </pre>
+          </p>
+        </div>
+      </ion-item>
+  </ion-content>
+    <ion-content >
+        <div id="postlist">
+            <div class="list card" ng-repeat="post in posts">
+
+                <div class="item item-body">
+                    <img ng-if="post.imageData" class="full-image" src="{{post.imageData}}">
+                    <p>{{post.message}}
+                    </p>
+                    <p>
+                        <a href="#" class="subdued">{{post.like}} Like</a>
+                    </p>
+                </div>
+
+                <div class="item tabs tabs-secondary tabs-icon-left">
+                    <a  ng-click="likePost($index)" class="tab-item" href="#main">
+                        <i class="icon ion-thumbsup"></i>
+                        Like
+                    </a>
+                    <a class="tab-item" ng-click="share(post)" href="#">
+                        <i class="icon ion-share"></i>
+                        Share
+                    </a>
+                </div>
+            </div>
+        </div>
+        <br>
+    </ion-content>
+</ion-view>

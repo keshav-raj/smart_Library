@@ -1,0 +1,23 @@
+<ion-view title="Book Borrowed" hide-nav-bar="false" id="page9">
+  <ion-content padding="true" style="background: url(img/Dp8qFChWRcmDmyi1rLkr_money-2696229_1920.jpg) no-repeat center;background-size:cover;" class="has-header">
+    <ion-card>
+  <img height="500px" width="500px" class="img-thumbnail"  src="{{books.imageData}}">
+  <ion-card-content>
+    <div style="font-size:15px;">
+      <ul class="list-group">
+            <li class="list-group-item">  <h2><b>{{books.name}}</b></h2></li>
+            <li class="list-group-item">  <p>Book-Id: <b>{{books.id}}</b></p></li>
+            <li class="list-group-item"><p>User-Name: <b>{{books.userName}}</b></p></li>
+            <li class="list-group-item"><p>User-Id: <b>{{books.rollNo}}</b></p></li>
+
+
+        </ul>
+        <button ng-click="approve()" id="bookDetails2-button34" style="border-radius:17px 17px 17px 17px;" class="button button-positive button-block icon ion-android-done-all"> Approve </button>
+        <button ui-sref="adminTabsController.borrowingBooks()" id="bookDetails2-button34" style="border-radius:17px 17px 17px 17px;" class="button button-positive button-block icon ion-ios-close"> Deny</button>
+      </div>
+          </ion-card-content>
+        </ion-card>
+
+
+  </ion-content>
+</ion-view>

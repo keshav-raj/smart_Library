@@ -1,0 +1,57 @@
+<ion-view title="Signup" hide-nav-bar="true" id="page7">
+  <ion-content padding="true" style="background: url(img/pen.jpg) no-repeat center;background-size:cover;" >
+    <div class="card card-block py-5">
+
+          <form name="userForm">
+              <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+                  <div class="input-group input-group-lg pl-3">
+                     <span class=" input-group-addon bg-primary text-white p-4">
+                         <i class="fa fa-user" > </i>
+                     </span>
+                      <input type="text" name="name" class="form-control  " ng-model="UserDetails.name" placeholder="Name" required>
+                      <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block"><span class="btn btn-danger">Required</span></p>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <div class="input-group input-group-lg pl-3">
+                     <span mr-4 class=" input-group-addon bg-primary text-white p-4">
+                         <i  class="fa fa-id-card"> </i>
+                     </span>
+                      <input type="number" class="form-control bg-inverse " ng-model="UserDetails.rollNo" placeholder="Id" required>
+                  </div>
+              </div>
+              <div class="form-group"  ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+                  <div class="input-group input-group-lg pl-3">
+                     <span class=" input-group-addon bg-primary text-white p-4">
+                         <i class="fa fa-envelope"> </i>
+                     </span>
+                      <input type="Email" name="email" class="form-control bg-inverse " ng-model="UserDetails.email" placeholder="@Email">
+                       <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block"><span class="btn btn-danger">Required</span></p>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <div class="input-group input-group-lg pl-3">
+                     <span class=" input-group-addon bg-primary text-white p-4">
+                         <i class="fa fa-key"> </i>
+                     </span>
+                      <input type="password" class="form-control bg-inverse " ng-model="UserDetails.password" placeholder="Password" required>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <div class="input-group input-group-lg pl-3">
+                     <span class=" input-group-addon bg-primary text-white p-4">
+                         <i class="fa fa-mobile"> </i>
+                     </span>
+                      <input type="tel" class="form-control bg-inverse " ng-model="UserDetails.mobileNo" placeholder="mobileNo" required>
+                  </div>
+              </div>
+          </form>
+          <div class="btn-group " style="margin: 0 auto">
+            <button ng-disabled="userForm.$invalid" ng-click="createUser(UserDetails)"  class="btn btn-primary btn-lg mb-2 btn-inline icon ion-log-in"> Sign up</button >
+            <a ui-sref="login()" id="firstPage-button3"  class="btn btn-primary btn-lg ml-2 mb-2 btn-inline icon ion-person-stalker"> Cancel</a>
+
+          </div>
+            </div>
+
+  </ion-content>
+</ion-view>

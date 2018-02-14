@@ -1,0 +1,23 @@
+<ion-view title="Boook Returned" hide-nav-bar="false" id="page10">
+  <ion-content padding="true" style="background: url(img/DhgTbHcWSR1kAxuuRe6U_money-2696229_1920.jpg) no-repeat center;background-size:cover;" class="has-header">
+    <ion-card>
+  <img height="500px" width="500px" class="img-thumbnail"  src="{{book.imageData}}">
+  <ion-card-content>
+    <div style="font-size:15px;">
+      <ul class="list-group">
+            <li class="list-group-item">  <h2><b>{{book.name}}</b></h2></li>
+            <li class="list-group-item">  <p>Book-Id: <b>{{book.id}}</b></p></li>
+            <li class="list-group-item"><p>User-Name: <b>{{book.userName}}</b></p></li>
+            <li class="list-group-item"><p>User-Id: <b>{{book.rollNo}}</b></p></li>
+            <li class="list-group-item"><p>Borrowed at: <b>{{book.borrowedAt | date:'medium'}}</b></p></li>
+
+
+        </ul>
+        <button ng-click="approve()" id="bookDetails2-button34" style="border-radius:17px 17px 17px 17px;" class="button button-positive button-block icon ion-android-done-all"> Approve </button>
+        <button ng-click="deny()" id="bookDetails2-button34" style="border-radius:17px 17px 17px 17px;" class="button button-positive button-block icon ion-ios-close"> Deny</button>
+          <button ui-sref="adminTabsController.returnedBooks()" id="bookDetails2-button34" style="border-radius:17px 17px 17px 17px;" class="button button-positive button-block icon ion-ios-close"> back</button>
+      </div>
+          </ion-card-content>
+        </ion-card>
+  </ion-content>
+</ion-view>

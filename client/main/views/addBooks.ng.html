@@ -1,0 +1,37 @@
+<ion-view title="Add Books" hide-nav-bar="false" id="page5">
+  <ion-content padding="true" style="background: url(img/8mevVuaHTUmwuATVOmry_bear-3112496_1920.jpg) no-repeat center;background-size:cover;" class="has-header">
+    <ion-card>
+  <img id="myImage" class="full-image">
+  <ion-card-content>
+    <div style="font-size:15px;">
+      <form id="addBooks-form2" class="list">
+        <label class="item item-input" id="addBooks-input3">
+          <span class="input-label">Book Name</span>
+          <input type="text" placeholder="" ng-model="newbook.name">
+        </label>
+        <label class="item item-input" id="addBooks-input5">
+          <span class="input-label">Book id</span>
+          <input type="text" placeholder="" ng-model="newbook.id">
+        </label>
+        <label class="item item-input" id="addBooks-input7">
+          <span class="input-label">Author</span>
+          <input type="text" placeholder="" ng-model="newbook.authorName">
+        </label>
+        <label class="item item-input" id="addBooks-input6">
+          <span class="input-label">Department</span>
+          <input type="text" placeholder="" ng-model="newbook.department">
+        </label>
+        <label class="item item-input" id="addBooks-input6">
+          <span class="input-label">Availability</span>
+          <input type="number" placeholder="" ng-model="newbook.availability">
+        </label>
+      </form>
+      <button id="addBooks-button9" style="border-radius:17px 17px 17px 17px;" class="button button-positive button-block icon ion-android-add-circle"  ng-click="bookDetails()"> Add Book</button>
+      <button ng-click="getPhoto()" id="addBooks-button10" style="border-radius:17px 17px 17px 17px;" class="button button-positive button-block icon ion-android-upload"> Upload Image</button>
+        <button ui-sref="adminTabsController.adminLibrary()" id="bookDetails2-button34" style="border-radius:17px 17px 17px 17px;" class="button button-positive button-block icon ion-ios-close"> Cancel</button>
+      </div>
+          </ion-card-content>
+        </ion-card>
+
+  </ion-content>
+</ion-view>

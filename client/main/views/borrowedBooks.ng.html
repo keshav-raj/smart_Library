@@ -1,0 +1,26 @@
+<ion-view title="My Library" hide-nav-bar="false" id="page3">
+  <ion-content padding="true"  class="manual-ios-statusbar-padding">
+    <button type="button" name="button" class="btn btn-primary" ng-click="notify()" >notify</button>
+    <div class="card" ng-repeat="Book in Books">
+  <h3 class="card-header">{{Book.name}}</h3>
+  <div class="card-block ">
+     <div class="row">
+       <div class="col-3" style="float:right">
+         <img  class="img-thumbnail mt-2"  src="{{Book.imageData}}">
+       </div>
+       <div class="col-9">
+        <div class="row">
+          <div class="col-9">
+            <h4 class="card-title">BookId: <b>{{Book.id}}</b></h4>
+             <h5 class="card-text">Author: <b>{{Book.authorName}}</b></h5>
+        </div>
+          <div class="col-3">
+            <a href="#" class="btn btn-primary  btn-lg" ui-sref="tabsController.myBookDetails({bookid: Book._id})" >View Book</a>
+          </div>
+          </div>
+        </div>
+     </div>
+  </div>
+  </div>
+  </ion-content>
+</ion-view>

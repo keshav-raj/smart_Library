@@ -1,0 +1,32 @@
+<ion-view title="Book Details" hide-nav-bar="false" id="page20">
+  <ion-content padding="true" class="has-header">
+
+    <ion-card>
+  <img width="500px" height="500px" class="img-thumbnail"  src="{{book.imageData}}">
+  <ion-card-content>
+    <div style="font-size:15px;">
+      <ul class="list-group">
+            <li class="list-group-item">  <h2><b>{{book.name}}</b></h2></li>
+            <li class="list-group-item">  <p>Book-Id: <b>{{book.id}}</b></p></li>
+            <li class="list-group-item"><p>Author-Name: <b>{{book.authorName}}</b></p></li>
+            <li class="list-group-item"><p>Department: <b>{{book.department}}</b></p></li>
+            <li class="list-group-item"><p class="display-6 ">Availability: <span class="badge badge-primary badge-pill"> {{book.availability}} </span> </p> </li>
+
+
+        </ul>
+          <br>
+
+          <div class="row">
+            <div class="col-10 mt-4">
+              <button  ng-disabled="checkAvailability()" ng-click="borrow()" id="bookDetails2-button36"  class="btn btn-primary btn-lg mb-3 icon ion-ios-cart"> TakeBook</button>
+              <button ui-sref="tabsController.studLibrary()" id="bookDetails2-button34"  class="btn btn-primary btn-lg mb-3 icon ion-ios-close"> Cancel</button>
+              <button  ng-disabled="wishBtnCtrl()" ng-click="wishList()"  id="bookDetails2-button34"  class="btn btn-primary btn-lg mb-3 icon ion-ios-heart"> wishList</button>
+          </div>
+            </div>
+
+      </div>
+          </ion-card-content>
+        </ion-card>
+
+  </ion-content>
+</ion-view>
