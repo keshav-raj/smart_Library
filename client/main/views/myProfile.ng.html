@@ -6,10 +6,10 @@
       <ion-card-content>
         <div style="font-size:15px;">
           <ul class="list-group">
-                <li class="list-group-item">  <h2>Name: Keshav</h2></li>
-                <li class="list-group-item">  <p>ID: <b>412714104031</b></p></li>
-                <li class="list-group-item"><p>Email: <b>abc@gmail.com</b></p></li>
-                <li class="list-group-item"><p>mobileNo: <b>9874563210</b></p></li>
+                <li class="list-group-item">  <h2>Name: <span class="bold">{{users.profile.name}}</span> </h2></li>
+                <li class="list-group-item">  <p>ID: <b><span class="bold">{{users.profile.rollNo}}</span> </b></p></li>
+                <li class="list-group-item"><p>Email: <b><span class="bold">{{users.emails.[0].address}}</span>  </b></p></li>
+                <li class="list-group-item"><p>mobileNo: <b><span class="bold">{{users.profile.mobileNo}}</span> </b></p></li>
             </ul>
           </div>
               </ion-card-content>
