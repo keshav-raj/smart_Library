@@ -4,14 +4,26 @@
         <ion-card>
       <img height="500px" width="500px" class="img-thumbnail"  src="img/Teady.jpg">
       <ion-card-content>
-        <div style="font-size:15px;">
-          <ul class="list-group">
-                <li class="list-group-item">  <h2>Name: <span class="bold">{{users.profile.name}}</span> </h2></li>
-                <li class="list-group-item">  <p>ID: <b><span class="bold">{{users.profile.rollNo}}</span> </b></p></li>
-                <li class="list-group-item"><p>Email: <b><span class="bold">{{users.emails.[0].address}}</span>  </b></p></li>
-                <li class="list-group-item"><p>mobileNo: <b><span class="bold">{{users.profile.mobileNo}}</span> </b></p></li>
-            </ul>
-          </div>
+      <div style="font-size:15px;">
+          <form id="user" class="list">
+            <label class="item item-input" >
+              <span class="input-label">User Name</span>
+              <input type="text"  ng-model="Users.profile.name">
+            </label>
+            <label class="item item-input" >
+              <span class="input-label">User id</span>
+              <input type="text"  ng-model="Users.profile.rollNo" disabled>
+            </label>
+            <label class="item item-input" >
+              <span class="input-label">Email</span>
+              <input type="text"  ng-model="Users.emails[0].address">
+            </label>
+            <label class="item item-input" >
+              <span class="input-label">mobileNo</span>
+              <input type="text"  ng-model="Users.profile.mobileNo">
+            </label>
+          </form>
+        </div>
               </ion-card-content>
             </ion-card>
 

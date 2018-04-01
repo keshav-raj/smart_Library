@@ -5,7 +5,7 @@ angular.module('smartLibrary')
     $scope.helpers({
       Users: function(){
         var userId = Meteor.userId();
-        return  users.findOne({_id:userId});
+        return  Meteor.users.findOne({_id:userId});
    }
    });
 
