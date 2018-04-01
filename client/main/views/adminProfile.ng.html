@@ -5,12 +5,24 @@
           <img height="500px" width="500px" class="img-thumbnail"  src="img/Teady.jpg">
           <ion-card-content>
             <div style="font-size:15px;">
-              <ul class="list-group">
-                    <li class="list-group-item">  <h2>Name: Keshav</h2></li>
-                    <li class="list-group-item">  <p>ID: <b>412714104031</b></p></li>
-                    <li class="list-group-item"><p>Email: <b>abc@gmail.com</b></p></li>
-                    <li class="list-group-item"><p>mobileNo: <b>9874563210</b></p></li>
-                </ul>
+                <form id="user" class="list">
+                  <label class="item item-input" >
+                    <span class="input-label">User Name</span>
+                    <input type="text"  ng-model="Users.profile.name">
+                  </label>
+                  <label class="item item-input" >
+                    <span class="input-label">User id</span>
+                    <input type="text"  ng-model="Users.profile.rollNo" disabled>
+                  </label>
+                  <label class="item item-input" >
+                    <span class="input-label">Email</span>
+                    <input type="text"  ng-model="Users.emails[0].address">
+                  </label>
+                  <label class="item item-input" >
+                    <span class="input-label">mobileNo</span>
+                    <input type="text"  ng-model="Users.profile.mobileNo">
+                  </label>
+                </form>
               </div>
                   </ion-card-content>
                 </ion-card>
